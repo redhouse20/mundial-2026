@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial FIFA 2026 - Red House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="watermark">RED HOUSE</div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">RED HOUSE <span class="sublogo">MUNDIAL 2026</span></div>
+            <button id="btn-reset" class="btn-secondary">Restablecer Torneo</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section id="today-section" class="section-container hidden">
+            <h2 class="section-title">Partidos de Hoy</h2>
+            <div id="today-matches-grid" class="matches-grid"></div>
+        </section>
+
+        <nav class="phase-nav">
+            <button class="nav-link active" data-target="fase-grupos">Fase de Grupos</button>
+            <button class="nav-link" data-target="ronda-32">Dieciseisavos (R32)</button>
+            <button class="nav-link" data-target="ronda-16">Octavos</button>
+            <button class="nav-link" data-target="cuartos">Cuartos</button>
+            <button class="nav-link" data-target="semis">Semis & Finales</button>
+            <button class="nav-link" data-target="podio">Podio</button>
+        </nav>
+
+        <div id="fase-grupos" class="tab-content active">
+            <div id="groups-container" class="groups-grid"></div>
+        </div>
+
+        <div id="ronda-32" class="tab-content">
+            <h2 class="section-title">Dieciseisavos de Final (Round of 32)</h2>
+            <div id="r32-grid" class="matches-grid elimination-grid"></div>
+        </div>
+
+        <div id="ronda-16" class="tab-content">
+            <h2 class="section-title">Octavos de Final</h2>
+            <div id="r16-grid" class="matches-grid elimination-grid"></div>
+        </div>
+
+        <div id="cuartos" class="tab-content">
+            <h2 class="section-title">Cuartos de Final</h2>
+            <div id="r8-grid" class="matches-grid elimination-grid"></div>
+        </div>
+
+        <div id="semis" class="tab-content">
+            <div class="split-bracket">
+                <div>
+                    <h2 class="section-title">Semifinales</h2>
+                    <div id="r4-grid" class="matches-grid elimination-grid"></div>
+                </div>
+                <div>
+                    <h2 class="section-title">Tercer Puesto</h2>
+                    <div id="r3_place-grid" class="matches-grid elimination-grid"></div>
+                </div>
+                <div>
+                    <h2 class="section-title">Gran Final</h2>
+                    <div id="r2-grid" class="matches-grid elimination-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="podio" class="tab-content">
+            <h2 class="section-title">Cuadro de Honor</h2>
+            <div class="podium-container">
+                <div class="podium-card subchampion">
+                    <div class="position">2°</div>
+                    <div class="flag" id="podium-2-flag">─</div>
+                    <div class="name" id="podium-2-name">Subcampeón</div>
+                </div>
+                <div class="podium-card champion">
+                    <div class="crown">👑</div>
+                    <div class="position">1°</div>
+                    <div class="flag" id="podium-1-flag">─</div>
+                    <div class="name" id="podium-1-name">CAMPEÓN</div>
+                </div>
+                <div class="podium-card third">
+                    <div class="position">3°</div>
+                    <div class="flag" id="podium-3-flag">─</div>
+                    <div class="name" id="podium-3-name">Tercer Puesto</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
